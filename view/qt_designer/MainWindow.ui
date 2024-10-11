@@ -48,17 +48,17 @@
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="pushButton_2">
        <property name="text">
         <string>实验2 检索问题</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="pushButton_1">
        <property name="text">
         <string>实验1 斐波那契数</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="pushButton_3">
        <property name="text">
         <string>实验3 背包问题</string>
        </property>
@@ -73,7 +73,7 @@
      <x>0</x>
      <y>0</y>
      <width>824</width>
-     <height>22</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
