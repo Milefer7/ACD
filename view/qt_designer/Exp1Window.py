@@ -15,10 +15,14 @@ class Ui_Exp1Window(object):
     def setupUi(self, Exp1Window):
         Exp1Window.setObjectName("Exp1Window")
         Exp1Window.resize(400, 300)
+        self.pushButton_exp1_out = QtWidgets.QPushButton(Exp1Window)
+        self.pushButton_exp1_out.setGeometry(QtCore.QRect(280, 230, 75, 23))
+        self.pushButton_exp1_out.setObjectName("pushButton_exp1_out")
 
         self.retranslateUi(Exp1Window)
         QtCore.QMetaObject.connectSlotsByName(Exp1Window)
 
     def retranslateUi(self, Exp1Window):
         _translate = QtCore.QCoreApplication.translate
-        Exp1Window.setWindowTitle(_translate("Exp1Window", "Form"))
+        Exp1Window.setWindowTitle(_translate("Exp1Window", "实验1"))
+        self.pushButton_exp1_out.setText(_translate("Exp1Window", "返回主窗口"))

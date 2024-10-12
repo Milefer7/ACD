@@ -11,8 +11,21 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>实验1</string>
   </property>
+  <widget class="QPushButton" name="pushButton_exp1_out">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>230</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>返回主窗口</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

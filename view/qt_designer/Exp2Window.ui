@@ -6,13 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>824</width>
-    <height>558</height>
+    <width>398</width>
+    <height>299</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>实验2</string>
   </property>
+  <widget class="QPushButton" name="pushButton_exp2_out">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>240</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>返回主窗口</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
