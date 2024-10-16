@@ -1,10 +1,10 @@
 from PyQt5.QtWidgets import QWidget, QMainWindow
 
-from view.exp1_view import Exp1Window
-from view.exp2_view import Exp2Window
-from view.exp3_view import Exp3Window
-from view.qt_designer.MainWindow import Ui_MainWindow  # 导入主窗口UI
-from view.qt_designer.Exp1Window import Ui_Exp1Window  # 导入生成的 UI 类
+from controllers.exp1_view import Exp1Window
+from controllers.exp2_view import Exp2Window
+from controllers.exp3_view import Exp3Window
+from ui_py.MainWindow import Ui_MainWindow  # 导入主窗口UI
+from ui_py.Exp1Window import Ui_Exp1Window
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
