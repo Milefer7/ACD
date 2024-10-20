@@ -22,8 +22,8 @@
   <widget class="QPushButton" name="pushButton_exp1_out">
    <property name="geometry">
     <rect>
-     <x>880</x>
-     <y>820</y>
+     <x>870</x>
+     <y>800</y>
      <width>141</width>
      <height>51</height>
     </rect>
@@ -35,24 +35,24 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_q2">
+  <widget class="QPushButton" name="pushButton_q1">
    <property name="geometry">
     <rect>
-     <x>820</x>
-     <y>120</y>
-     <width>151</width>
-     <height>71</height>
+     <x>230</x>
+     <y>150</y>
+     <width>111</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
-    <string>Q2:五种方法</string>
+    <string>点击跳转</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>0</y>
+     <x>30</x>
+     <y>10</y>
      <width>1041</width>
      <height>881</height>
     </rect>
@@ -82,13 +82,83 @@
     <number>-1</number>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_q2">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>290</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>点击跳转</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_q3">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>410</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>点击跳转</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_q4">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>530</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>点击跳转</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_q5">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>690</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>点击跳转</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_q6">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>800</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>点击跳转</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
-  <zorder>pushButton_q2</zorder>
+  <zorder>pushButton_q1</zorder>
   <zorder>pushButton_exp1_out</zorder>
+  <zorder>pushButton_q2</zorder>
+  <zorder>pushButton_q3</zorder>
+  <zorder>pushButton_q4</zorder>
+  <zorder>pushButton_q5</zorder>
+  <zorder>pushButton_q6</zorder>
  </widget>
  <resources>
   <include location="../resources/res.qrc"/>
-  <include location="../../../.designer/resources/res.qrc"/>
+  <include location="../resources/res.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -91,7 +91,7 @@ def fibo4_formula(num):
     :return: 第 num 个斐波那契数、基本操作、基本操作次数、运行时间、空间效率
     """
     start_time = time.perf_counter()  # 开始计时
-    operation = 2*num + 6
+    operation = 2 * num + 6
     sqrt_5 = math.sqrt(5)
     phi = (1 + sqrt_5) / 2  # 黄金分割比
     psi = (1 - sqrt_5) / 2  # 另一个根
@@ -109,7 +109,7 @@ def fibo5_matrix(num):
     :return: 第 num 个斐波那契数、基本操作、基本操作次数、运行时间、空间效率
     """
     start_time = time.perf_counter()  # 开始计时
-    operations = int(8 * (math.log2(num)+1))
+    operations = int(8 * (math.log2(num) + 1))
     if num < 2:
         execution_time = f"{time.perf_counter() - start_time:.6f}"
         return num, '乘法', 0, execution_time, "常数"
@@ -140,37 +140,69 @@ def fibo5_matrix(num):
     return int(result), '乘法', operations, execution_time, "常数"
 
 
+def question1_output_cmd(n):
+    print(f"计算第 {n} 个斐波那契数：")
+
+    # 调用第一种方法：迭代（空间复杂度线性）
+    result1 = fibo1_iteration(n)
+    print(f"1. 迭代：结果={result1[0]}, 操作类型={result1[1]}, 操作次数={result1[2]}, "
+          f"运行时间={result1[3]} 秒, 空间复杂度={result1[4]}")
+
+    # 调用第二种方法：迭代（空间复杂度常数）
+    result2 = fibo2_iteration(n)
+    print(f"2. 迭代：结果={result2[0]}, 操作类型={result2[1]}, 操作次数={result2[2]}, "
+          f"运行时间={result2[3]} 秒, 空间复杂度={result2[4]}")
+
+    # 调用第三种方法：递归
+    result3 = fibo3_recursion(n)
+    print(f"3. 递归：结果={result3[0]}, 操作类型={result3[1]}, 操作次数={result3[2]}, "
+          f"运行时间={result3[3]} 秒, 空间复杂度={result3[4]}")
+
+    # 调用第四种方法：公式
+    result4 = fibo4_formula(n)
+    print(f"4. 公式：结果={result4[0]}, 操作类型={result4[1]}, 操作次数={result4[2]}, "
+          f"运行时间={result4[3]} 秒, 空间复杂度={result4[4]}")
+
+    # 调用第五种方法：矩阵
+    result5 = fibo5_matrix(n)
+    print(f"5. 矩阵：结果={result5[0]}, 操作类型={result5[1]}, 操作次数={result5[2]}, "
+          f"运行时间={result5[3]} 秒, 空间复杂度={result5[4]}")
+
+
+def question1_output_qt(n):
+    output = f"计算第 {n} 个斐波那契数：\n"
+
+    # 调用第一种方法：迭代（空间复杂度线性）
+    result1 = fibo1_iteration(n)
+    output += f"1. 迭代：结果={result1[0]}, 操作类型={result1[1]}, 操作次数={result1[2]}, " \
+              f"运行时间={result1[3]} 秒, 空间复杂度={result1[4]}\n"
+
+    # 调用第二种方法：迭代（空间复杂度常数）
+    result2 = fibo2_iteration(n)
+    output += f"2. 迭代：结果={result2[0]}, 操作类型={result2[1]}, 操作次数={result2[2]}, " \
+              f"运行时间={result2[3]} 秒, 空间复杂度={result2[4]}\n"
+
+    # 调用第三种方法：递归
+    result3 = fibo3_recursion(n)
+    output += f"3. 递归：结果={result3[0]}, 操作类型={result3[1]}, 操作次数={result3[2]}, " \
+              f"运行时间={result3[3]} 秒, 空间复杂度={result3[4]}\n"
+
+    # 调用第四种方法：公式
+    result4 = fibo4_formula(n)
+    output += f"4. 公式：结果={result4[0]}, 操作类型={result4[1]}, 操作次数={result4[2]}, " \
+              f"运行时间={result4[3]} 秒, 空间复杂度={result4[4]}\n"
+
+    # 调用第五种方法：矩阵
+    result5 = fibo5_matrix(n)
+    output += f"5. 矩阵：结果={result5[0]}, 操作类型={result5[1]}, 操作次数={result5[2]}, " \
+              f"运行时间={result5[3]} 秒, 空间复杂度={result5[4]}\n"
+
+    return output
+
+
 if __name__ == "__main__":
     n_values = [1, 10, 20, 30]  # 测试的斐波那契数列位置
 
     for n in n_values:
-        print(f"计算第 {n} 个斐波那契数：")
-
-        # 调用第一种方法：迭代（空间复杂度线性）
-        result1 = fibo1_iteration(n)
-        print(f"1. 迭代：结果={result1[0]}, 操作类型={result1[1]}, 操作次数={result1[2]}, "
-              f"运行时间={result1[3]} 秒, 空间复杂度={result1[4]}")
-
-        # 调用第二种方法：迭代（空间复杂度常数）
-        result2 = fibo2_iteration(n)
-        print(f"2. 迭代：结果={result2[0]}, 操作类型={result2[1]}, 操作次数={result2[2]}, "
-              f"运行时间={result2[3]} 秒, 空间复杂度={result2[4]}")
-
-        # 调用第三种方法：递归
-        result3 = fibo3_recursion(n)
-        print(f"3. 递归：结果={result3[0]}, 操作类型={result3[1]}, 操作次数={result3[2]}, "
-              f"运行时间={result3[3]} 秒, 空间复杂度={result3[4]}")
-
-        # 调用第四种方法：公式
-        result4 = fibo4_formula(n)
-        print(f"4. 公式：结果={result4[0]}, 操作类型={result4[1]}, 操作次数={result4[2]}, "
-              f"运行时间={result4[3]} 秒, 空间复杂度={result4[4]}")
-
-        # 调用第五种方法：矩阵
-        result5 = fibo5_matrix(n)
-        print(f"5. 矩阵：结果={result5[0]}, 操作类型={result5[1]}, 操作次数={result5[2]}, "
-              f"运行时间={result5[3]} 秒, 空间复杂度={result5[4]}")
-
+        question1_output(n)
         print("-" * 50)  # 分割线
-
-
