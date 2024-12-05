@@ -5,6 +5,7 @@ from controllers.exp2_view import Exp2Window
 from controllers.exp3_view import Exp3Window
 from ui_py.MainWindow import Ui_MainWindow  # 导入主窗口UI
 from ui_py.Exp1Window import Ui_Exp1Window
+from ui_py.Exp1_q1 import Ui_Dialog
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
