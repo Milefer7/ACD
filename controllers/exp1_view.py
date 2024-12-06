@@ -39,6 +39,9 @@ class Exp1Window(QWidget, Ui_Exp1Window):
         # q5 迭代
         self.pushButton_q5_inter.clicked.connect(self.q5_interation)
 
+        # q6
+        self.pushButton_q6.clicked.connect(self.q6)
+
     # 显示主窗口并隐藏当前的 exp1 窗口
     def go_back_to_main(self):
         self.main_window.show_main_window()  # 调用主窗口中的方法显示主窗口
@@ -85,11 +88,13 @@ class Exp1Window(QWidget, Ui_Exp1Window):
         print_by_dialog(detail)
 
     def q5_interation(self):
-        count, max_num, time_consuming = question5_recursive_output_qt()
         QMessageBox.warning(self, '提示', '需要30s时间请稍等...计算完成后会弹出对话框！')
-        output = f"迭代算法，30s内最大支持的斐波那契数是第 {count} 个\n\n" \
-                 f"计算下一个斐波那契数耗时 {time_consuming:.6f} 秒"
-        print_by_dialog(output)
+        string = question5_interation_output_qt()
+        print_by_dialog(string)
+
+    def q6(self):
+        string = question6_output_qt()
+        print_by_dialog(string)
 
 
 class Exp1Dialog(QDialog, Ui_Dialog):
@@ -98,4 +103,7 @@ class Exp1Dialog(QDialog, Ui_Dialog):
         self.setupUi(self)
 
     def setText(self, text):
+        font = self.textEdit.font()
+        font.setPointSize(14)  # Set the desired font size
+        self.textEdit.setFont(font)
         self.textEdit.setText(text)

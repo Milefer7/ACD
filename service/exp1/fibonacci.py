@@ -314,5 +314,58 @@ def question5_recursive_output_qt():
     return 42, time_consuming_43, string  # 返回最大能支持的斐波那契数的序号
 
 
-if __name__ == '__main__':
-    question2_output_qt()
+# 用递归计算30s内最大支持的斐波那契数是第几个，再计算下一个斐波那契数耗时多少，返回结果
+def question5_interation_output_qt():
+    # 迭代计算30s 斐波那契数
+    start_time = time.perf_counter()
+    a, b = 0, 1
+    count = 1
+    while time.perf_counter() - start_time < 30:
+        a, b = b, a + b
+        count += 1
+    end_time = time.perf_counter()
+    time_consuming_lim_30s = end_time - start_time
+
+    _, _, _, execution_time_next, _ = fibo2_iteration(count)
+
+    string = (
+        f"斐波那契数计算结果:\n"
+        f"- 最大不超过 64 位整数的斐波那契数为: 第 {count - 1} 个\n\n"
+        f"- 运行总时间: {time_consuming_lim_30s:.6f} 秒\n\n"
+        f"- 计算下一个斐波那契数的耗时: {execution_time_next} 秒"
+    )
+    return string
+
+
+# ******************************************************************
+# q6
+# 利用公式F(*n*) = [f*n*/sqrt(5)]快速计算第n个斐波那契数，找出 出现误差时的最小n值。
+def question6_output_qt():
+    phi = (1 + math.sqrt(5)) / 2
+    sqrt_5 = math.sqrt(5)
+
+    # 迭代计算斐波那契数
+    a, b = 0, 1
+    n = 1
+    while True:
+        # 真实值
+        a, b = b, a + b
+
+        # 公式计算值
+        approx = round((phi ** n) / sqrt_5)
+
+        # 检查误差
+        if approx != a:
+            string = (
+                f"误差首次出现的结果:\n"
+                f"- 最小 n 值: {n}\n"
+                f"- 真实值: {a}\n"
+                f"- 公式计算值: {approx}\n"
+            )
+
+            return string
+
+        n += 1
+
+# if __name__ == '__main__':
+#     # question5_interation_output_qt()
