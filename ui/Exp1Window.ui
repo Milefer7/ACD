@@ -121,7 +121,7 @@
     <string>点击跳转</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_q5">
+  <widget class="QPushButton" name="pushButton_q5_recur">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -131,7 +131,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>点击跳转</string>
+    <string>递归算法</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_q6">
@@ -147,14 +147,28 @@
     <string>点击跳转</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_q5_inter">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>690</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>迭代算法</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>pushButton_q1</zorder>
   <zorder>pushButton_exp1_out</zorder>
   <zorder>pushButton_q2</zorder>
   <zorder>pushButton_q3</zorder>
   <zorder>pushButton_q4</zorder>
-  <zorder>pushButton_q5</zorder>
+  <zorder>pushButton_q5_recur</zorder>
   <zorder>pushButton_q6</zorder>
+  <zorder>pushButton_q5_inter</zorder>
  </widget>
  <resources>
   <include location="../resources/res.qrc"/>

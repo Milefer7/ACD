@@ -200,9 +200,119 @@ def question1_output_qt(n):
     return output
 
 
-if __name__ == "__main__":
-    n_values = [1, 10, 20, 30]  # 测试的斐波那契数列位置
+# ******************************************************************
+# q2
+# 用迭代法计算编程环境最大支持的斐波那契数
+def question2_output_qt():
+    # 最大整数值 (64位系统)
+    max_int = 2 ** 63 - 1
+    a, b = 0, 1
+    count = 1  # 从第1个斐波那契数开始
 
-    for n in n_values:
-        question1_output(n)
-        print("-" * 50)  # 分割线
+    start_time = time.perf_counter()  # 记录开始时间
+
+    while b <= max_int:
+        a, b = b, a + b
+        count += 1
+
+    end_time = time.perf_counter()  # 记录结束时间
+    time_consuming = end_time - start_time
+
+    # print(f"不超过64位整数最大值的斐波那契数为第 {count-1} 个")
+    # print(f"执行时间: {end_time - start_time:.6f} 秒")
+    return count - 1, time_consuming  # 返回最大能支持的斐波那契数的序号
+
+
+# ******************************************************************
+# q3
+# 传统递归计算斐波那契数
+def fibonacci_recursive_traditional(n):
+    if n < 2:
+        return n
+    else:
+        return fibonacci_recursive_traditional(n - 1) + fibonacci_recursive_traditional(n - 2)
+
+
+def question3_output_qt():
+    # 最大整数值 (64位系统)
+    max_int = 2 ** 63 - 1
+    count = 0
+    a = 0
+    b = 1
+
+    start_time = time.time()  # 记录开始时间
+
+    # 使用传统递归方法查找不超过最大值的最大斐波那契数
+    while b <= max_int:
+        count += 1
+        a, b = b, fibonacci_recursive_traditional(count)  # 递归计算第 count 个斐波那契数
+
+    end_time = time.time()  # 记录结束时间
+    time_consuming = end_time - start_time  # 计算执行时间
+
+    return count, time_consuming  # 返回最大支持的斐波那契数的序号和执行时间
+
+
+# ******************************************************************
+# q4
+# 递归计算斐波那契数并返回不超过最大整数的斐波那契数的序号
+def fibonacci_recursive(a, b, count, max_int):
+    if b > max_int:
+        return count - 1, a  # 返回之前的一个斐波那契数序号
+    else:
+        return fibonacci_recursive(b, a + b, count + 1, max_int)
+
+
+def question4_output_qt():
+    # 最大整数值 (64位系统)
+    max_int = 2 ** 63 - 1
+    start_time = time.perf_counter()  # 记录开始时间
+
+    # 递归计算斐波那契数的第一个数和第二个数为 0 和 1
+    count, max_num = fibonacci_recursive(0, 1, 1, max_int)
+
+    end_time = time.perf_counter()  # 记录结束时间
+    time_consuming = end_time - start_time
+
+    # print(f"不超过64位整数最大值的斐波那契数为第 {count} 个")
+    # print(f"执行时间: {end_time - start_time:.6f} 秒")
+    return count, max_num, time_consuming  # 返回最大能支持的斐波那契数的序号
+
+
+# ******************************************************************
+# q5
+# 用递归计算30s内最大支持的斐波那契数是第几个，再计算下一个斐波那契数耗时多少，返回结果
+def recursive_fib(n):
+    if n < 2:
+        return n
+    else:
+        return recursive_fib(n - 1) + recursive_fib(n - 2)
+
+
+def fibonacci_recursive_time():
+    start_time = time.perf_counter()  # 记录开始时间
+    return recursive_fib
+
+
+def question5_recursive_output_qt():
+    string = "递归计算第41个斐波那契: 16.569211600006383, 递归计算第42个斐波那契: 27.941687300000922"
+    # 递归计算30s 斐波那契数
+    # start_time = time.perf_counter()
+    # recursive_fib(41)
+    # end_time = time.perf_counter()
+    # time_consuming_41 = end_time - start_time
+    # # print(f"递归计算第41个斐波那契: {time_consuming_41}")
+    # detail = f"递归计算第41个斐波那契: {time_consuming_41}"
+
+    start_time = time.perf_counter()
+    recursive_fib(43)
+    end_time = time.perf_counter()
+    time_consuming_43 = end_time - start_time
+    # print(f"递归计算第42个斐波那契: {time_consuming_41}")
+    # detail += f"\n递归计算第42个斐波那契: {time_consuming_42}"
+
+    return 42, time_consuming_43, string  # 返回最大能支持的斐波那契数的序号
+
+
+if __name__ == '__main__':
+    question2_output_qt()
