@@ -34,11 +34,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.hide()
 
     def show_exp2_window(self):
-        self.exp1_window.show()
+        self.exp2_window.show()
         self.hide()
 
     def show_exp3_window(self):
-        self.exp1_window.show()
+        self.exp3_window.show()
         self.hide()
 
     # 显示主窗口并隐藏 exp1 窗口（从 exp1 回到主窗口时使用）

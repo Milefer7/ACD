@@ -1,4 +1,5 @@
 import random
+from controllers.exp1_view import print_by_dialog
 
 
 # 问题1
