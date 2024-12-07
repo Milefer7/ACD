@@ -16,9 +16,9 @@
   <widget class="QPushButton" name="pushButton_exp2_out">
    <property name="geometry">
     <rect>
-     <x>820</x>
+     <x>784</x>
      <y>770</y>
-     <width>75</width>
+     <width>111</width>
      <height>23</height>
     </rect>
    </property>
@@ -145,6 +145,7 @@
  </widget>
  <resources>
   <include location="../resources/res.qrc"/>
+  <include location="../../../.designer/resources/res.qrc"/>
  </resources>
  <connections/>
 </ui>

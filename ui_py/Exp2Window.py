@@ -16,7 +16,7 @@ class Ui_Exp2Window(object):
         Exp2Window.setObjectName("Exp2Window")
         Exp2Window.resize(923, 803)
         self.pushButton_exp2_out = QtWidgets.QPushButton(Exp2Window)
-        self.pushButton_exp2_out.setGeometry(QtCore.QRect(820, 770, 75, 23))
+        self.pushButton_exp2_out.setGeometry(QtCore.QRect(784, 770, 111, 23))
         self.pushButton_exp2_out.setObjectName("pushButton_exp2_out")
         self.label = QtWidgets.QLabel(Exp2Window)
         self.label.setGeometry(QtCore.QRect(30, -130, 891, 1041))
