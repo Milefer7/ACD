@@ -63,7 +63,7 @@ def dynamic_01(capacity, items):
     return dp_v[n][capacity], dp_w[n][capacity]  # 返回最大价值和重量
 
 
-# 问题 6: 改进的动态规划（使用一维数组减少空间复杂度）
+# 改进的动态规划（使用一维数组减少空间复杂度）
 def dynamic_improve_01(capacity, items):
     n = len(items)
     dp_v = [0] * (capacity + 1)  # 一维数组，记录背包容量每个位置的最大价值
@@ -77,7 +77,7 @@ def dynamic_improve_01(capacity, items):
     return dp_v[capacity], dp_w[capacity]  # 返回最大价值和重量
 
 
-# 问题 7: 动态规划（记忆化搜索优化）
+# 问题 6: 动态规划（记忆化搜索优化）
 def dynamic_memory_01(capacity, items):
     n = len(items)
     memo = {}  # 记忆化字典，用于存储已经计算过的结果

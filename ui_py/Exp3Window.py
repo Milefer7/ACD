@@ -58,7 +58,7 @@ class Ui_Exp3Window(object):
         Exp3Window.setWindowTitle(_translate("Exp3Window", "实验3"))
         self.pushButton_exp3_out.setText(_translate("Exp3Window", "返回主窗口"))
         self.pushButton_q1.setText(_translate("Exp3Window", "点击输入"))
-        self.pushButton_q2.setText(_translate("Exp3Window", "点击跳转"))
+        self.pushButton_q2.setText(_translate("Exp3Window", "点击输入"))
         self.pushButton_q3.setText(_translate("Exp3Window", "点击跳转"))
         self.pushButton_q4.setText(_translate("Exp3Window", "点击跳转"))
         self.pushButton_q5.setText(_translate("Exp3Window", "点击跳转"))

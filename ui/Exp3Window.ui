@@ -65,7 +65,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>点击跳转</string>
+    <string>点击输入</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_q3">

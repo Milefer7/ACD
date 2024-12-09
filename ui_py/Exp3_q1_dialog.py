@@ -15,9 +15,9 @@ class Ui_Dialog_exp3_q1(object):
     def setupUi(self, Dialog_exp3_q1):
         Dialog_exp3_q1.setObjectName("Dialog_exp3_q1")
         Dialog_exp3_q1.resize(422, 290)
-        self.pushButton = QtWidgets.QPushButton(Dialog_exp3_q1)
-        self.pushButton.setGeometry(QtCore.QRect(280, 250, 98, 26))
-        self.pushButton.setObjectName("pushButton")
+        self.pushButton_submit_data = QtWidgets.QPushButton(Dialog_exp3_q1)
+        self.pushButton_submit_data.setGeometry(QtCore.QRect(280, 250, 98, 26))
+        self.pushButton_submit_data.setObjectName("pushButton_submit_data")
         self.tableWidget = QtWidgets.QTableWidget(Dialog_exp3_q1)
         self.tableWidget.setGeometry(QtCore.QRect(50, 40, 331, 191))
         self.tableWidget.setObjectName("tableWidget")
@@ -36,7 +36,7 @@ class Ui_Dialog_exp3_q1(object):
     def retranslateUi(self, Dialog_exp3_q1):
         _translate = QtCore.QCoreApplication.translate
         Dialog_exp3_q1.setWindowTitle(_translate("Dialog_exp3_q1", "Dialog"))
-        self.pushButton.setText(_translate("Dialog_exp3_q1", "提交数据"))
+        self.pushButton_submit_data.setText(_translate("Dialog_exp3_q1", "提交数据"))
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("Dialog_exp3_q1", "物品编号"))
         item = self.tableWidget.horizontalHeaderItem(1)
