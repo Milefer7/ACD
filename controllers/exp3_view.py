@@ -3,6 +3,7 @@ from PyQt5 import QtWidgets, QtCore
 from ui_py.Exp3Window import Ui_Exp3Window
 from ui_py.Exp3_q1_dialog import Ui_Dialog_exp3_q1
 from service.exp3.bag import *
+from controllers.exp1_view import show_by_dialog
 
 
 class Exp3Window(QWidget, Ui_Exp3Window):
@@ -76,6 +77,8 @@ class Exp3Window(QWidget, Ui_Exp3Window):
     def q2(self):
         capacity, ok = QInputDialog.getInt(self, '输入框', '请输入背包最大容量：')
         self.capacity = capacity
+        print('=' * 60)
+        print("q2调试信息")
         print("背包的容量是：", self.capacity)
         if ok:
             try:
@@ -86,45 +89,61 @@ class Exp3Window(QWidget, Ui_Exp3Window):
                 QMessageBox.warning(self, '错误', '请输入一个有效的整数！')
                 return
             max_value, max_weight = greedy_fractional(capacity, self.items)
-            print(f'q2结果：最大价值为：{max_value}，最终背包重量为：{max_weight}，时间复杂度为 O(nlogn)。')
-            QMessageBox.information(self, 'q2结果',
-                                    f'最大价值为：{max_value}，最终背包重量为：{max_weight}，时间复杂度为 O(nlogn)。')
+
+            string = f'q2结果：最大价值为：{max_value}，最终背包重量为：{max_weight}，时间复杂度为 O(nlogn)。'
+            print(string)
+
+            QMessageBox.information(self, 'q2结果', string)
 
         else:
             QMessageBox.warning(self, '提示', '没有输入任何内容！')
             return
 
     def q3(self):
+        print("")
+        print('=' * 60)
+        print("q3调试信息")
         if self.capacity is None:
             QMessageBox.warning(self, '错误', '请先完成q2，输入背包的容量！')
             return
         max_value, max_weight = greedy_01(self.capacity, self.items)
         print(f'q3结果：实例的近似解：最大价值为：{max_value}，最终背包重量为：{max_weight}。')
-        QMessageBox.information(self, '结果', f'实例的近似解：最大价值为：{max_value}，最终背包重量为：{max_weight}。')
+        QMessageBox.information(self, 'q3结果', f'实例的近似解：最大价值为：{max_value}，最终背包重量为：{max_weight}。')
 
     def q4(self):
         if self.capacity is None:
             QMessageBox.warning(self, '错误', '请先完成q2，输入背包的容量！')
             return
+        print('=' * 60)
+        print('q4调试信息')
         max_value, max_weight = brute_01(self.capacity, self.items)
         print(f'q4结果：实例的最优解：最大价值为：{max_value}，最终背包重量为：{max_weight}， 时间复杂度为 O(2^n)。')
-        QMessageBox.information(self, '结果', f'实例的最优解：最大价值为：{max_value}，最终背包重量为：{max_weight}， 时间复杂度为 O(2^n)。')
+        QMessageBox.information(self, 'q4结果',
+                                f'实例的最优解：最大价值为：{max_value}，最终背包重量为：{max_weight}， 时间复杂度为 O(2^n)。')
 
     def q5(self):
+        # print('=' * 60)
         if self.capacity is None:
             QMessageBox.warning(self, '错误', '请先完成q2，输入背包的容量！')
             return
+        # 打印q5分隔符
+        print('=' * 50)
+        print('q5调试信息')
         max_value, max_weight = dynamic_01(self.capacity, self.items)
         print(f'q5结果：实例的最优解：最大价值为：{max_value}，最终背包重量为：{max_weight}， 时间复杂度为 O(nW)。')
-        QMessageBox.information(self, '结果', f'实例的最优解：最大价值为：{max_value}，最终背包重量为：{max_weight}， 时间复杂度为 O(nW)。')
+        QMessageBox.information(self, 'q5结果',
+                                f'实例的最优解：最大价值为：{max_value}，最终背包重量为：{max_weight}， 时间复杂度为 O(nW)。')
 
     def q6(self):
+        print('=' * 60)
+        print("q6调试信息")
         if self.capacity is None:
             QMessageBox.warning(self, '错误', '请先完成q2，输入背包的容量！')
             return
         max_value, max_weight = dynamic_memory_01(self.capacity, self.items)
         print(f'q6结果：实例的最优解：最大价值为：{max_value}，最终背包重量为：{max_weight}， 时间复杂度为 O(nW)。')
-        QMessageBox.information(self, '结果', f'实例的最优解：最大价值为：{max_value}，最终背包重量为：{max_weight}， 时间复杂度为 O(nW)。')
+        QMessageBox.information(self, 'q6结果',
+                                f'实例的最优解：最大价值为：{max_value}，最终背包重量为：{max_weight}， 时间复杂度为 O(nW)。')
 
     def submit_data(self, ui, n):
         for i in range(n):
@@ -145,9 +164,11 @@ class Exp3Window(QWidget, Ui_Exp3Window):
                 QMessageBox.warning(self, '错误', '请输入有效的整数，请重新输入！')
                 return
 
-        print("实验3 调试信息：")
-        print("物品的数量是：", self.item_num)
-        print("物品的价值和重量是：", self.items)
+        print('=' * 60)
+        string = "实验3 基础信息：\n"
+        string += f"物品的数量是：{self.item_num}\n"
+        string += f"物品的价值和重量是：{self.items}\n"
+        print(string)
 
         QMessageBox.information(self, '提示', '数据提交成功！')
         # ui.close()

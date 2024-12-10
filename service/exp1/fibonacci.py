@@ -175,27 +175,27 @@ def question1_output_qt(n):
     # 调用第一种方法：迭代（空间复杂度线性）
     result1 = fibo1_iteration(n)
     output += f"1. 迭代：结果={result1[0]}, 操作类型={result1[1]}, 操作次数={result1[2]}, " \
-              f"运行时间={result1[3]} 秒, 空间复杂度={result1[4]}\n"
+              f"运行时间={result1[3]} 秒, 空间复杂度={result1[4]}\n\n"
 
     # 调用第二种方法：迭代（空间复杂度常数）
     result2 = fibo2_iteration(n)
     output += f"2. 迭代：结果={result2[0]}, 操作类型={result2[1]}, 操作次数={result2[2]}, " \
-              f"运行时间={result2[3]} 秒, 空间复杂度={result2[4]}\n"
+              f"运行时间={result2[3]} 秒, 空间复杂度={result2[4]}\n\n"
 
     # 调用第三种方法：递归
     result3 = fibo3_recursion(n)
     output += f"3. 递归：结果={result3[0]}, 操作类型={result3[1]}, 操作次数={result3[2]}, " \
-              f"运行时间={result3[3]} 秒, 空间复杂度={result3[4]}\n"
+              f"运行时间={result3[3]} 秒, 空间复杂度={result3[4]}\n\n"
 
     # 调用第四种方法：公式
     result4 = fibo4_formula(n)
     output += f"4. 公式：结果={result4[0]}, 操作类型={result4[1]}, 操作次数={result4[2]}, " \
-              f"运行时间={result4[3]} 秒, 空间复杂度={result4[4]}\n"
+              f"运行时间={result4[3]} 秒, 空间复杂度={result4[4]}\n\n"
 
     # 调用第五种方法：矩阵
     result5 = fibo5_matrix(n)
     output += f"5. 矩阵：结果={result5[0]}, 操作类型={result5[1]}, 操作次数={result5[2]}, " \
-              f"运行时间={result5[3]} 秒, 空间复杂度={result5[4]}\n"
+              f"运行时间={result5[3]} 秒, 空间复杂度={result5[4]}\n\n"
 
     return output
 

@@ -13,6 +13,13 @@ def print_by_dialog(output):
     dialog.exec_()
 
 
+def show_by_dialog(output):
+    # 创建一个新的对话框
+    dialog = Exp1Dialog()
+    dialog.setText(output)
+    dialog.show()
+
+
 class Exp1Window(QWidget, Ui_Exp1Window):
     def __init__(self, main_window):
         super().__init__()

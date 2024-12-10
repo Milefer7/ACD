@@ -14,12 +14,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog_exp3_q1(object):
     def setupUi(self, Dialog_exp3_q1):
         Dialog_exp3_q1.setObjectName("Dialog_exp3_q1")
-        Dialog_exp3_q1.resize(422, 290)
+        Dialog_exp3_q1.resize(567, 388)
         self.pushButton_submit_data = QtWidgets.QPushButton(Dialog_exp3_q1)
-        self.pushButton_submit_data.setGeometry(QtCore.QRect(280, 250, 98, 26))
+        self.pushButton_submit_data.setGeometry(QtCore.QRect(440, 340, 98, 26))
         self.pushButton_submit_data.setObjectName("pushButton_submit_data")
         self.tableWidget = QtWidgets.QTableWidget(Dialog_exp3_q1)
-        self.tableWidget.setGeometry(QtCore.QRect(50, 40, 331, 191))
+        self.tableWidget.setGeometry(QtCore.QRect(30, 40, 511, 281))
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(3)
         self.tableWidget.setRowCount(0)
